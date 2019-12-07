@@ -312,10 +312,3 @@ function validate(element) {
 function handleValidate (event) {
   validate(event.target);
 }
-
-// var numbers = [1, -2, 3, -4]; // инициализируем переменную, содержащую массив числовых значений
-// console.log(numbers.find( number => number < 0 ));
-// console.log(if (number => number < 0 ){
-//                 return
-//             }
-// );
