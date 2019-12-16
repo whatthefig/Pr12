@@ -9,9 +9,10 @@ app.use('/', routesUsers);
 app.use('/', routesCards);
 app.use(express.static('public'));
 app.use((req, res) => {
-  res.status(404).send({ "message": "Запрашиваемый ресурс не найден" });
+  res.status(404).send({ message: 'Запрашиваемый ресурс не найден' });
 });
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`Используется порт ${PORT}`);
 });

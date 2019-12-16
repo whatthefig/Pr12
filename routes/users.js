@@ -15,11 +15,12 @@ routesUsers.get('/users/:id', (req, res) => {
   fs.readFile(filepath, { encoding: 'utf8' }, (err, data) => {
     const users = JSON.parse(data);
     const { id } = req.params;
-    const user = users.find(user => id === user._id);
+    // eslint-disable-next-line no-underscore-dangle
+    const user = users.find((item) => id === item._id);
     if (user) {
       res.send(user);
     } else {
-      res.status(404).send({"message": "Нет пользователя с таким id"});
+      res.status(404).send({ message: 'Нет пользователя с таким id' });
     }
   });
 });
