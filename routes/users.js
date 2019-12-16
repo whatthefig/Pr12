@@ -2,7 +2,7 @@ const routesUsers = require('express').Router();
 const fs = require('fs');
 const path = require('path');
 
-const filepath = path.join('./data', 'users.json');
+const filepath = path.join(__dirname, '../data/users.json');
 
 routesUsers.get('/users', (req, res) => {
   fs.readFile(filepath, { encoding: 'utf8' }, (err, data) => {
